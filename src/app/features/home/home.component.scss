@@ -1,0 +1,12 @@
+#hero {
+  width: 100%;
+  min-height: 100vh;
+  /* Reducem opacitatea negrului la 45% - 55% pentru contrast vizibil */
+  background: 
+    linear-gradient(rgba(4, 11, 20, 0.45), rgba(4, 11, 20, 0.55)),
+    url('/hero-bg.jpg') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}

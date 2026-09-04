@@ -1,0 +1,33 @@
+.layout-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #040b14;
+  z-index: 9997;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.main-content {
+  margin-left: 300px;
+  flex: 1;
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* Adaptare pentru ecrane mici */
+@media (max-width: 991px) {
+  .sidebar {
+    left: -300px;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}
