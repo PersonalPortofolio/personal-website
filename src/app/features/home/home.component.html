@@ -1,64 +1,192 @@
 <!-- Hero Section -->
-<section id="hero" class="d-flex flex-column justify-content-center min-vh-100 p-5 text-white position-relative">
+<section id="acasa" class="d-flex flex-column justify-content-center min-vh-100 p-5 text-white position-relative">
   <div class="container" style="z-index: 2;">
     <h1 class="display-3 fw-bold mb-3">Persoană fizică autorizată</h1>
     <p class="fs-2 mb-4">
       Ofer <span #typedElement class="text-primary border-bottom border-primary border-2 pb-1"></span>
     </p>
     <div class="d-flex gap-3">
-      <a href="#services" class="btn btn-primary btn-lg px-4">Vezi Servicii</a>
+      <a href="#suport-software" class="btn btn-primary btn-lg px-4">Vezi Servicii</a>
       <a href="#contact" class="btn btn-outline-light btn-lg px-4">Contactează-mă</a>
     </div>
   </div>
 </section>
 
 <!-- About Section -->
-<section id="about" class="py-5">
-  <div class="container">
-    <h2>Despre Mine / PFA</h2>
-    <p>Servicii IT profesionale, dezvoltare software și administrare infrastructură Linux.</p>
+<section id="despre" class="py-5 bg-white">
+  <div class="container py-4">
+    <h2 class="fw-bold mb-3">Despre Mine / PFA</h2>
+    <p class="text-muted fs-5">Servicii IT profesionale, dezvoltare software și administrare infrastructură pentru companii și persoane fizice.</p>
   </div>
 </section>
 
-<!-- Services Section -->
-<section id="services" class="py-5 bg-light">
-  <div class="container">
-    <h2>Servicii</h2>
-    <div class="row g-4 mt-2">
-      <div class="col-md-4">
-        <div class="card p-3 shadow-sm h-100">
-          <h4>Dezvoltare Web</h4>
-          <p>Aplicații moderne Angular, API-uri REST și soluții personalizate.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card p-3 shadow-sm h-100">
-          <h4>Administrare Servere</h4>
-          <p>Debian/Ubuntu, Apache/Nginx, Docker, securitate și optimizare DNS/Cloudflare.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card p-3 shadow-sm h-100">
-          <h4>Consultanță IT</h4>
-          <p>Arhitectură software, audit de performanță și scalabilitate.</p>
-        </div>
+<!-- Services Section (Full-Width Parallax Style) -->
+<div class="services-wrapper bg-light">
+  <div class="container py-5 text-center">
+    <h2 class="fw-bold">Servicii IT pentru Companii și Persoane Fizice</h2>
+    <p class="text-muted fs-5">Soluții tehnologice rapide, direct la tine acasă sau la birou.</p>
+  </div>
+
+  <!-- 1. Suport Software -->
+  <section id="suport-software" class="parallax-service-section bg-white border-bottom">
+    <div class="parallax-banner" style="background-image: url('https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=1920&auto=format&fit=crop');">
+      <div class="banner-overlay"></div>
+      <div class="floating-icon">
+        <i class="bi bi-headset"></i>
       </div>
     </div>
-  </div>
-</section>
+    <div class="container text-center service-details">
+      <h3 class="fw-bold service-title">Suport Software & Devirusare</h3>
+      <p class="text-muted fs-6 mb-4 mx-auto" style="max-width: 700px;">
+        Intervenții rapide pentru laptopul personal sau rețeaua companiei. Eliminăm virușii și readucem sistemele la viteza optimă.
+      </p>
+      <ul class="list-unstyled text-secondary text-start mx-auto d-inline-block custom-list" style="max-width: 600px;">
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Instalare și optimizare Windows, macOS, Linux</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Devirusare profundă (Malware, Ransomware)</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Recuperare conturi și instalare programe specifice</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2. Reparații Hardware -->
+  <section id="reparatii-hardware" class="parallax-service-section bg-light border-bottom">
+    <div class="parallax-banner" style="background-image: url('https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=1920&auto=format&fit=crop');">
+      <div class="banner-overlay"></div>
+      <div class="floating-icon">
+        <i class="bi bi-tools"></i>
+      </div>
+    </div>
+    <div class="container text-center service-details">
+      <h3 class="fw-bold service-title">Service & Reparații Hardware</h3>
+      <p class="text-muted fs-6 mb-4 mx-auto" style="max-width: 700px;">
+        Diagnosticare precisă și reparații fizice pentru orice dispozitiv: PC, laptop, telefon sau tabletă, indiferent de marcă.
+      </p>
+      <ul class="list-unstyled text-secondary text-start mx-auto d-inline-block custom-list" style="max-width: 600px;">
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Înlocuire componente defecte (ecrane, baterii, plăci de bază)</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Curățare profesională de praf și schimbare pastă termică</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Upgrade SSD și RAM pentru performanță sporită</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. Asamblare PC -->
+  <section id="asamblare-pc" class="parallax-service-section bg-white border-bottom">
+    <div class="parallax-banner" style="background-image: url('https://images.unsplash.com/photo-1587202372634-32705e3bf49c?q=80&w=1920&auto=format&fit=crop');">
+      <div class="banner-overlay"></div>
+      <div class="floating-icon">
+        <i class="bi bi-cpu"></i>
+      </div>
+    </div>
+    <div class="container text-center service-details">
+      <h3 class="fw-bold service-title">Asamblare PC Custom</h3>
+      <p class="text-muted fs-6 mb-4 mx-auto" style="max-width: 700px;">
+        Construim sisteme de la zero, perfect adaptate bugetului tău, fie că vrei un PC de gaming extrem, fie o stație de lucru pentru editare.
+      </p>
+      <ul class="list-unstyled text-secondary text-start mx-auto d-inline-block custom-list" style="max-width: 600px;">
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Consultanță pentru alegerea și compatibilitatea pieselor</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Asamblare profesională și cable management premium</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Testare stabilitate (Stress test) și instalare OS</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Rețelistică -->
+  <section id="retelistica" class="parallax-service-section bg-light border-bottom">
+    <div class="parallax-banner" style="background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1920&auto=format&fit=crop');">
+      <div class="banner-overlay"></div>
+      <div class="floating-icon">
+        <i class="bi bi-router"></i>
+      </div>
+    </div>
+    <div class="container text-center service-details">
+      <h3 class="fw-bold service-title">Rețelistică & Infrastructură</h3>
+      <p class="text-muted fs-6 mb-4 mx-auto" style="max-width: 700px;">
+        Configurare de rețele stabile și sigure pentru acasă sau birou, acoperire Wi-Fi extinsă și echipamente profesionale.
+      </p>
+      <ul class="list-unstyled text-secondary text-start mx-auto d-inline-block custom-list" style="max-width: 600px;">
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Configurare routere, switch-uri și puncte de acces Wi-Fi</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Cablare structurată și optimizare semnal internet</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Conexiuni sigure VPN și securizare rețea</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. Administrare Servere -->
+  <section id="administrare-servere" class="parallax-service-section bg-white border-bottom">
+    <div class="parallax-banner" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1920&auto=format&fit=crop');">
+      <div class="banner-overlay"></div>
+      <div class="floating-icon">
+        <i class="bi bi-server"></i>
+      </div>
+    </div>
+    <div class="container text-center service-details">
+      <h3 class="fw-bold service-title">Administrare Servere & Cloud</h3>
+      <p class="text-muted fs-6 mb-4 mx-auto" style="max-width: 700px;">
+        Soluții complete de infrastructură digitală, mentenanță pentru servere fizice sau virtuale și migrare în cloud.
+      </p>
+      <ul class="list-unstyled text-secondary text-start mx-auto d-inline-block custom-list" style="max-width: 600px;">
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Administrare servere Linux / Windows Server</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Soluții de backup automat și disaster recovery</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Setup Microsoft 365 și servicii cloud</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6. Dezvoltare Software -->
+  <section id="dezvoltare-software" class="parallax-service-section bg-light border-bottom">
+    <div class="parallax-banner" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1920&auto=format&fit=crop');">
+      <div class="banner-overlay"></div>
+      <div class="floating-icon">
+        <i class="bi bi-code-slash"></i>
+      </div>
+    </div>
+    <div class="container text-center service-details">
+      <h3 class="fw-bold service-title">Dezvoltare Software & Web</h3>
+      <p class="text-muted fs-6 mb-4 mx-auto" style="max-width: 700px;">
+        Creare de aplicații web moderne, site-uri de prezentare și soluții software personalizate pentru afacerea ta.
+      </p>
+      <ul class="list-unstyled text-secondary text-start mx-auto d-inline-block custom-list" style="max-width: 600px;">
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Dezvoltare site-uri web și aplicații (Angular/Node)</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Mentenanță tehnică și optimizare SEO</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Automatizări și integrări API</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7. Consultanță IT -->
+  <section id="consultanta-it" class="parallax-service-section bg-white border-bottom">
+    <div class="parallax-banner" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1920&auto=format&fit=crop');">
+      <div class="banner-overlay"></div>
+      <div class="floating-icon">
+        <i class="bi bi-briefcase"></i>
+      </div>
+    </div>
+    <div class="container text-center service-details">
+      <h3 class="fw-bold service-title">Consultanță IT</h3>
+      <p class="text-muted fs-6 mb-4 mx-auto" style="max-width: 700px;">
+        Consultanță de specialitate pentru achiziția de echipamente sau optimizarea infrastructurii tehnologice existente.
+      </p>
+      <ul class="list-unstyled text-secondary text-start mx-auto d-inline-block custom-list" style="max-width: 600px;">
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Audit și evaluare a sistemelor IT</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Recomandări pentru achiziții hardware/software</li>
+        <li class="mb-2"><i class="bi bi-check2 text-primary me-2 fw-bold"></i> Externalizare servicii IT (Outsourcing)</li>
+      </ul>
+    </div>
+  </section>
+</div>
 
 <!-- Portfolio Section -->
-<section id="portfolio" class="py-5">
-  <div class="container">
-    <h2>Portofoliu</h2>
-    <p>Proiecte recente și soluții implementate.</p>
+<section id="portfolio" class="py-5 bg-white">
+  <div class="container py-4">
+    <h2 class="fw-bold mb-3">Portofoliu</h2>
+    <p class="text-muted fs-5">Proiecte recente și soluții implementate.</p>
   </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact" class="py-5 bg-light">
-  <div class="container">
-    <h2>Contact</h2>
-    <p>Discută despre următorul tău proiect IT.</p>
+  <div class="container py-4">
+    <h2 class="fw-bold mb-3">Contact</h2>
+    <p class="text-muted fs-5">Discută despre următorul tău proiect IT.</p>
   </div>
 </section>

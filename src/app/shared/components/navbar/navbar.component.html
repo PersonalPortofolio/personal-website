@@ -1,40 +1,51 @@
 <div class="d-flex flex-column h-100 p-3 text-white">
   <!-- Profile info -->
   <div class="profile text-center my-4">
-    <div class="avatar-placeholder rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
-      <i class="bi bi-person text-secondary fs-1"></i>
-    </div>
+    <!-- Poza reală de profil -->
+    <img src="/profile.JPG" alt="Eduard Banciu" class="img-fluid rounded-circle profile-img mb-3">
+    
     <h1 class="text-light fs-4 fw-bold mb-2">Eduard Banciu</h1>
     <span class="badge bg-primary px-3 py-2">IT PFA</span>
-
-    <!-- Social links -->
+    
+    <!-- Social links rămân la fel -->
     <div class="social-links mt-3 d-flex justify-content-center gap-2">
       <a href="https://github.com" target="_blank" class="social-btn"><i class="bi bi-github"></i></a>
       <a href="https://linkedin.com" target="_blank" class="social-btn"><i class="bi bi-linkedin"></i></a>
       <a href="mailto:contact@eduard.banciu.org" class="social-btn"><i class="bi bi-envelope"></i></a>
     </div>
   </div>
-
+  
   <!-- Navigation menu -->
-  <nav class="nav-menu mt-4 flex-grow-1">
+  <nav id="nav-menu" class="nav-menu mt-4 flex-grow-1">
     <ul class="list-unstyled">
       <li>
-        <a href="#hero" class="nav-link active">
+        <a (click)="scrollTo('acasa')" class="nav-link active" role="button">
           <i class="bi bi-house-door me-2"></i> <span>Acasă</span>
         </a>
       </li>
       <li>
-        <a href="#about" class="nav-link">
-          <i class="bi bi-person me-2"></i> <span>Despre Mine</span>
+        <a (click)="scrollTo('despre')" class="nav-link active" role="button">
+          <i class="bi bi-house-door me-2"></i> <span>Despre Mine</span>
         </a>
       </li>
-      <li>
-        <a href="#services" class="nav-link">
-          <i class="bi bi-hdd-stack me-2"></i> <span>Servicii IT</span>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#serviciiSubmenu" role="button" aria-expanded="false" aria-controls="serviciiSubmenu">
+          <i class="bi bi-hdd-network me-2"></i> <span>Servicii IT</span> <i class="bi bi-chevron-down ms-auto"></i>
         </a>
+        <div class="collapse" id="serviciiSubmenu">
+          <ul class="nav flex-column ms-3 submenu-list">
+            <li class="nav-item"><a href="#suport-software" class="nav-link"><i class="bi bi-dash"></i> Suport Software</a></li>
+            <li class="nav-item"><a href="#reparatii-hardware" class="nav-link"><i class="bi bi-dash"></i> Reparații Hardware</a></li>
+            <li class="nav-item"><a href="#asamblare-pc" class="nav-link"><i class="bi bi-dash"></i> Asamblare PC</a></li>
+            <li class="nav-item"><a href="#retelistica" class="nav-link"><i class="bi bi-dash"></i> Rețelistică</a></li>
+            <li class="nav-item"><a href="#administrare-servere" class="nav-link"><i class="bi bi-dash"></i> Administrare Servere</a></li>
+            <li class="nav-item"><a href="#dezvoltare-software" class="nav-link"><i class="bi bi-dash"></i> Dezvoltare Software</a></li>
+            <li class="nav-item"><a href="#consultanta-it" class="nav-link"><i class="bi bi-dash"></i> Consultanță IT</a></li>
+          </ul>
+        </div>
       </li>
       <li>
-        <a href="#portfolio" class="nav-link">
+        <a href="#portfoliu" class="nav-link">
           <i class="bi bi-code-slash me-2"></i> <span>Portofoliu</span>
         </a>
       </li>
@@ -45,7 +56,7 @@
       </li>
     </ul>
   </nav>
-
+  
   <!-- Footer sidebar -->
   <div class="sidebar-footer text-center text-muted small py-3 border-top border-secondary">
     &copy; {{ currentYear }} Eduard Banciu PFA

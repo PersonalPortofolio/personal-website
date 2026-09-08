@@ -20,6 +20,55 @@
   flex: 1;
   background: #fff;
   min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 9999;
+  border: 0;
+  background: #0284c7; /* Culoarea de accent */
+  color: #fff;
+  font-size: 28px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  
+  &:hover {
+    background: #0369a1;
+  }
+}
+
+.layout-wrapper.sidebar-toggled {
+  .sidebar {
+    left: -300px;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* Comportament Mobil: Meniul e ascuns default, butonul îl afișează */
+@media (max-width: 991px) {
+  .sidebar {
+    left: -300px;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .layout-wrapper.sidebar-toggled {
+    .sidebar {
+      left: 0;
+    }
+  }
 }
 
 /* Adaptare pentru ecrane mici */
@@ -31,3 +80,4 @@
     margin-left: 0;
   }
 }
+

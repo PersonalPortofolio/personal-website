@@ -60,3 +60,127 @@
     }
   }
 }
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover; // Previne deformarea imaginii
+  border: 6px solid rgba(255, 255, 255, 0.1);
+}
+
+#services {
+  .service-card {
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent !important;
+    
+    i.d-block {
+      transition: transform 0.3s ease;
+    }
+
+    .custom-list {
+      li {
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: flex-start;
+        font-size: 0.95rem;
+
+        i {
+          color: #0284c7; /* Albastru IT */
+          font-size: 1rem;
+          margin-right: 10px;
+          margin-top: 3px; /* Aliniază iconița cu prima linie a textului */
+        }
+      }
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+      border-bottom: 4px solid #0284c7 !important;
+
+      i.d-block {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.submenu-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 5px;
+  
+  li {
+    margin-bottom: 0 !important; /* Elimină spațiul dintre <li> urile din submeniu */
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 6px 15px !important; /* Padding redus pentru un aspect mai compact */
+    margin-bottom: 2px !important; /* Spațiu minim între linkuri */
+    color: #a1a1aa;
+    transition: all 0.3s ease;
+    
+    i { 
+      font-size: 1rem; 
+      margin-right: 5px; 
+    }
+    
+    &:hover, &.active {
+      color: #0284c7;
+      background: transparent;
+    }
+  }
+}
+
+/* --- AUTO-EXPAND SUBMENIU LA SCROLL --- */
+
+/* 1. Forțează afișarea submeniului dacă un element din interiorul lui este activ */
+#serviciiSubmenu:has(.nav-link.active) {
+  display: block !important;
+}
+
+/* 2. Iluminează butonul părinte ("Servicii IT") și rotește săgeata */
+.nav-item:has(#serviciiSubmenu .nav-link.active) > .nav-link[data-bs-toggle="collapse"] {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+
+  i:first-child {
+    color: #149ddd !important;
+  }
+  
+  /* Rotește săgeata în sus pentru a indica faptul că e deschis */
+  .bi-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+}
+
+/* --- ADAPTARE NAVBAR PENTRU TELEFON (MOBILE RESPONSIVE) --- */
+
+@media (max-width: 991.98px) {
+  .navbar, .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Ascuns în stânga în mod implicit pe ecrane mici */
+    width: 280px;
+    height: 100vh;
+    z-index: 1050;
+    transition: left 0.3s ease-in-out;
+    background-color: #040b14; /* Culoarea de fundal a meniului tău */
+    overflow-y: auto;
+
+    /* Când meniul primește clasa 'active' sau 'show', culisează pe ecran */
+    &.show, &.active {
+      left: 0;
+    }
+  }
+
+  /* Asigură-te că butonul de burger este mereu vizibil deasupra conținutului */
+  .mobile-nav-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+  }
+}

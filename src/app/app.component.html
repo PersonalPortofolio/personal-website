@@ -1,4 +1,9 @@
-<div class="layout-wrapper">
+<div class="layout-wrapper" [class.sidebar-toggled]="isSidebarToggled">
+  
+  <button class="nav-toggle-btn" (click)="toggleSidebar()">
+    <i class="bi bi-list"></i>
+  </button>
+
   <aside id="header" class="sidebar">
     <app-navbar></app-navbar>
   </aside>
