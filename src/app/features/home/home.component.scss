@@ -1,0 +1,115 @@
+#acasa {
+  width: 100%;
+  min-height: 100vh;
+  /* Reducem opacitatea negrului la 45% - 55% pentru contrast vizibil */
+  background: 
+    linear-gradient(rgba(4, 11, 20, 0.45), rgba(4, 11, 20, 0.55)),
+    url('/hero-bg.jpg') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+#services {
+  background-color: #f8fafc; /* Un gri extrem de deschis, curat */
+
+  .premium-service-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0,0,0,0.03) !important;
+    
+    .icon-wrapper {
+      transition: all 0.3s ease;
+    }
+
+    .custom-list li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      
+      i {
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06) !important;
+
+      .icon-wrapper {
+        background-color: #0284c7 !important;
+        color: #ffffff !important;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.parallax-service-section {
+  padding-bottom: 4rem;
+  
+  /* Containerul imaginii pe toată lățimea */
+  .parallax-banner {
+    width: 100%;
+    height: 350px; 
+    background-attachment: fixed; /* Creează efectul de scroll */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+    /* Ușoară întunecare pentru accent pe iconiță */
+    .banner-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.2); 
+    }
+
+    /* Iconița rotundă care iese în afară jumătate */
+    .floating-icon {
+      position: relative;
+      z-index: 2;
+      background: #0284c7; /* Albastru IT */
+      color: #ffffff;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      transform: translateY(50%); /* Mută iconița fix pe linia dintre poză și fundalul alb */
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      border: 5px solid #ffffff; /* Margine albă pentru decupaj curat */
+    }
+  }
+
+  .service-details {
+    padding-top: 60px; /* Face spațiu pentru iconița ieșită în afară */
+    
+    /* Titlul subliniat */
+    .service-title {
+      display: inline-block;
+      padding-bottom: 12px;
+      margin-bottom: 25px;
+      border-bottom: 3px solid #0284c7; 
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  #acasa {
+    background-attachment: scroll !important; /* Fixează bug-ul de parallax pe mobil */
+  }
+
+  .parallax-service-section {
+    .parallax-banner {
+      height: 220px !important; /* O înălțime perfect echilibrată pentru telefon */
+      background-attachment: scroll !important; /* Dezactivează paralaxa pe mobil pentru a afișa corect imaginea */
+    }
+  }
+}
