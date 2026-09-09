@@ -12,6 +12,7 @@
   background: #040b14;
   z-index: 9997;
   overflow-y: auto;
+  overflow-x: hidden;
   transition: all 0.3s ease;
 }
 
@@ -59,7 +60,8 @@
 /* Comportament Mobil: Meniul e ascuns default, butonul îl afișează */
 @media (max-width: 991px) {
   .sidebar {
-    left: -300px;
+    width: 240px;  /* Lățimea mult mai bună pentru mobil */
+    left: -240px;  /* Îl ascundem exact cât este de lat */
   }
   .main-content {
     margin-left: 0;
@@ -72,7 +74,7 @@
 }
 
 /* Adaptare pentru ecrane mici */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .sidebar {
     left: -300px;
   }
@@ -80,4 +82,4 @@
     margin-left: 0;
   }
 }
-
+ */

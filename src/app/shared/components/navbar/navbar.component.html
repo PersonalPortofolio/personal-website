@@ -19,38 +19,67 @@
   <nav id="nav-menu" class="nav-menu mt-4 flex-grow-1">
     <ul class="list-unstyled">
       <li>
-        <a (click)="scrollTo('acasa')" class="nav-link active" role="button">
+        <a (click)="scrollTo('acasa')" [class.active]="currentSection === 'acasa'" class="nav-link active" role="button">
           <i class="bi bi-house-door me-2"></i> <span>Acasă</span>
         </a>
       </li>
       <li>
-        <a (click)="scrollTo('despre')" class="nav-link active" role="button">
-          <i class="bi bi-house-door me-2"></i> <span>Despre Mine</span>
+        <a (click)="scrollTo('despre')" [class.active]="currentSection === 'despre'" class="nav-link" role="button">
+          <i class="bi bi-person me-2"></i> <span>Despre Mine</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#serviciiSubmenu" role="button" aria-expanded="false" aria-controls="serviciiSubmenu">
-          <i class="bi bi-hdd-network me-2"></i> <span>Servicii IT</span> <i class="bi bi-chevron-down ms-auto"></i>
+        <a (click)="toggleServicesMenu()" [class.collapsed]="!isServicesMenuOpen" [class.active]="serviceSections.includes(currentSection)" class="nav-link" role="button">
+          <i class="bi bi-hdd-network me-2"></i> <span>Servicii IT</span> 
+          <i class="bi bi-chevron-down ms-auto" [style.transform]="isServicesMenuOpen ? 'rotate(180deg)' : 'none'" style="transition: transform 0.3s ease;"></i>
         </a>
-        <div class="collapse" id="serviciiSubmenu">
-          <ul class="nav flex-column ms-3 submenu-list">
-            <li class="nav-item"><a href="#suport-software" class="nav-link"><i class="bi bi-dash"></i> Suport Software</a></li>
-            <li class="nav-item"><a href="#reparatii-hardware" class="nav-link"><i class="bi bi-dash"></i> Reparații Hardware</a></li>
-            <li class="nav-item"><a href="#asamblare-pc" class="nav-link"><i class="bi bi-dash"></i> Asamblare PC</a></li>
-            <li class="nav-item"><a href="#retelistica" class="nav-link"><i class="bi bi-dash"></i> Rețelistică</a></li>
-            <li class="nav-item"><a href="#administrare-servere" class="nav-link"><i class="bi bi-dash"></i> Administrare Servere</a></li>
-            <li class="nav-item"><a href="#dezvoltare-software" class="nav-link"><i class="bi bi-dash"></i> Dezvoltare Software</a></li>
-            <li class="nav-item"><a href="#consultanta-it" class="nav-link"><i class="bi bi-dash"></i> Consultanță IT</a></li>
+        <div class="collapse" [class.show]="isServicesMenuOpen" [style.display]="isServicesMenuOpen ? 'block' : 'none'">
+          <ul class="nav flex-column submenu-list">
+            <li class="nav-item">
+              <a (click)="scrollTo('suport-software')" [class.active]="currentSection === 'suport-software'" class="nav-link" role="button">
+                <i class="bi bi-dash"></i> <span> Suport Software</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="scrollTo('reparatii-hardware')" [class.active]="currentSection === 'reparatii-hardware'" class="nav-link" role="button">
+                <i class="bi bi-dash"></i> <span> Reparații Hardware</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="scrollTo('asamblare-pc')" [class.active]="currentSection === 'asamblare-pc'" class="nav-link" role="button">
+                <i class="bi bi-dash"></i> <span> Asamblare PC</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="scrollTo('retelistica')" [class.active]="currentSection === 'retelistica'" class="nav-link" role="button">
+                <i class="bi bi-dash"></i> <span> Rețelistică</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="scrollTo('administrare-servere')" [class.active]="currentSection === 'administrare-servere'" class="nav-link" role="button">
+                <i class="bi bi-dash"></i> <span> Administrare Servere</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="scrollTo('dezvoltare-software')" [class.active]="currentSection === 'dezvoltare-software'" class="nav-link" role="button">
+                <i class="bi bi-dash"></i> <span> Dezvoltare Software</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="scrollTo('consultanta-it')" [class.active]="currentSection === 'consultanta-it'" class="nav-link" role="button">
+                <i class="bi bi-dash"></i> <span> Consultanță IT</span>
+              </a>
+            </li>
           </ul>
         </div>
       </li>
       <li>
-        <a href="#portfoliu" class="nav-link">
+        <a (click)="scrollTo('portfoliu')" [class.active]="currentSection === 'portfoliu'" class="nav-link" role="button">
           <i class="bi bi-code-slash me-2"></i> <span>Portofoliu</span>
         </a>
       </li>
       <li>
-        <a href="#contact" class="nav-link">
+        <a (click)="scrollTo('contact')" [class.active]="currentSection === 'contact'" class="nav-link" role="button">
           <i class="bi bi-envelope-at me-2"></i> <span>Contact</span>
         </a>
       </li>

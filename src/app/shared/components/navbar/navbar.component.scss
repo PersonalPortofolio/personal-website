@@ -136,9 +136,9 @@
 /* --- AUTO-EXPAND SUBMENIU LA SCROLL --- */
 
 /* 1. Forțează afișarea submeniului dacă un element din interiorul lui este activ */
-#serviciiSubmenu:has(.nav-link.active) {
+/* #serviciiSubmenu:has(.nav-link.active) {
   display: block !important;
-}
+} */
 
 /* 2. Iluminează butonul părinte ("Servicii IT") și rotește săgeata */
 .nav-item:has(#serviciiSubmenu .nav-link.active) > .nav-link[data-bs-toggle="collapse"] {
@@ -163,7 +163,7 @@
     position: fixed;
     top: 0;
     left: -100%; /* Ascuns în stânga în mod implicit pe ecrane mici */
-    width: 280px;
+    width: 230px;
     height: 100vh;
     z-index: 1050;
     transition: left 0.3s ease-in-out;
