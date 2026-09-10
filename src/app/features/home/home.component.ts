@@ -28,7 +28,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       this.ngZone.runOutsideAngular(() => {
         this.typedInstance = new Typed(this.typedElement.nativeElement, {
           strings: [
-            'Soluții Software & Web Apps', //(CAEN 6201)
+            'Soluții Software & Aplicații Web, Mobile, Desktop', //(CAEN 6201)
             'Consultanță în Tehnologia Informației', //(CAEN 6202)
             'Administrare Servere & Infrastructură IT', //(CAEN 6203)
             'Servicii & Suport Tehnic IT Complet' //(CAEN 6209)

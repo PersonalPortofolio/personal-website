@@ -5,13 +5,23 @@
     <img src="/profile.JPG" alt="Eduard Banciu" class="img-fluid rounded-circle profile-img mb-3">
     
     <h1 class="text-light fs-4 fw-bold mb-2">Eduard Banciu</h1>
-    <span class="badge bg-primary px-3 py-2">IT PFA</span>
+    <!--<span class="badge bg-primary px-3 py-2">IT PFA</span>-->
     
-    <!-- Social links rămân la fel -->
     <div class="social-links mt-3 d-flex justify-content-center gap-2">
+      <!-- Github și LinkedIn ascunse temporar
       <a href="https://github.com" target="_blank" class="social-btn"><i class="bi bi-github"></i></a>
       <a href="https://linkedin.com" target="_blank" class="social-btn"><i class="bi bi-linkedin"></i></a>
-      <a href="mailto:contact@eduard.banciu.org" class="social-btn"><i class="bi bi-envelope"></i></a>
+      -->
+
+      <!-- Buton Telefon (Deschide dialer-ul pe mobil) -->
+      <a href="tel:+40745013838" class="social-btn" title="Sună acum">
+        <i class="bi bi-telephone"></i>
+      </a>
+      
+      <!-- Buton Email -->
+      <a href="mailto:banciu.edy@gmail.com" class="social-btn" title="Trimite un email">
+        <i class="bi bi-envelope"></i>
+      </a>
     </div>
   </div>
   
@@ -73,11 +83,13 @@
           </ul>
         </div>
       </li>
+      <!-- TEMPORAR ASCUNS
       <li>
         <a (click)="scrollTo('portfoliu')" [class.active]="currentSection === 'portfoliu'" class="nav-link" role="button">
           <i class="bi bi-code-slash me-2"></i> <span>Portofoliu</span>
         </a>
       </li>
+      -->
       <li>
         <a (click)="scrollTo('contact')" [class.active]="currentSection === 'contact'" class="nav-link" role="button">
           <i class="bi bi-envelope-at me-2"></i> <span>Contact</span>

@@ -1,14 +1,16 @@
-<div class="layout-wrapper" [class.sidebar-toggled]="isSidebarToggled">
-  
   <button class="nav-toggle-btn" (click)="toggleSidebar()">
     <i class="bi bi-list"></i>
   </button>
-
-  <aside id="header" class="sidebar">
-    <app-navbar (closeMenu)="isSidebarToggled = false"></app-navbar>
-  </aside>
-
-  <main id="main" class="main-content">
-    <router-outlet></router-outlet>
-  </main>
-</div>
+  
+  <div class="layout-wrapper" [class.sidebar-toggled]="isSidebarToggled">
+    
+    
+    
+    <aside id="header" class="sidebar">
+      <app-navbar (closeMenu)="isSidebarToggled = false"></app-navbar>
+    </aside>
+    
+    <main id="main" class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>

@@ -31,7 +31,7 @@ export class NavbarComponent {
   sections: string[] = [
     'acasa', 'despre', 'suport-software', 'reparatii-hardware',
     'asamblare-pc', 'retelistica', 'administrare-servere',
-    'dezvoltare-software', 'consultanta-it', 'portfoliu', 'contact'
+    'dezvoltare-software', 'consultanta-it', /* 'portfoliu', */ 'contact'
   ];
   
   serviceSections: string[] = [
