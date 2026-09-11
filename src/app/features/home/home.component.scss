@@ -113,3 +113,27 @@
     }
   }
 }
+
+.user-details-grid {
+  display: grid;
+  gap: 1rem;
+  /* Pe mobil: o singură coloană, limitată la lățimea conținutului pentru a se centra perfect */
+  grid-template-columns: auto;
+  max-width: 320px;
+}
+
+@media (min-width: 992px) {
+  .user-details-grid {
+    /* Pe PC: două coloane egale, elementele curg de sus în jos pe coloane */
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(3, auto);
+    max-width: 100%;
+    gap: 1.5rem 2rem; 
+  }
+}
+
+.detail-item {
+  /* Forțează iconița și textul să stea mereu pe centrul axei verticale */
+  height: 100%;
+}
